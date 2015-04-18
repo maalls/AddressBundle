@@ -1,0 +1,194 @@
+<?php
+
+namespace Maalls\AddressBundle\Entity;
+
+class Address {
+
+    
+    /**
+     * @var integer
+     */
+    private $id;
+
+    /**
+     * @var string
+     */
+    private $address_line1 = "";
+
+    /**
+     * @var string
+     */
+    private $address_line2 = "";
+
+    /**
+     * @var string
+     */
+    private $country = "";
+
+    /**
+     * @var string
+     */
+    private $city = "";
+
+    /**
+     * @var string
+     */
+    private $zip_code = "";
+
+
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set address_line1
+     *
+     * @param string $addressLine1
+     * @return Address
+     */
+    public function setAddressLine1($addressLine1)
+    {
+        $this->address_line1 = $addressLine1;
+
+        return $this;
+    }
+
+    /**
+     * Get address_line1
+     *
+     * @return string 
+     */
+    public function getAddressLine1()
+    {
+        return $this->address_line1;
+    }
+
+    /**
+     * Set address_line2
+     *
+     * @param string $addressLine2
+     * @return Address
+     */
+    public function setAddressLine2($addressLine2)
+    {
+        $this->address_line2 = $addressLine2;
+
+        return $this;
+    }
+
+    /**
+     * Get address_line2
+     *
+     * @return string 
+     */
+    public function getAddressLine2()
+    {
+        return $this->address_line2;
+    }
+
+    /**
+     * Set country
+     *
+     * @param string $country
+     * @return Address
+     */
+    public function setCountry($country)
+    {
+        $this->country = $country;
+
+        return $this;
+    }
+
+    /**
+     * Get country
+     *
+     * @return string 
+     */
+    public function getCountry()
+    {
+        return $this->country;
+    }
+
+    /**
+     * Set city
+     *
+     * @param string $city
+     * @return Address
+     */
+    public function setCity($city)
+    {
+        $this->city = $city;
+
+        return $this;
+    }
+
+    /**
+     * Get city
+     *
+     * @return string 
+     */
+    public function getCity()
+    {
+        return $this->city;
+    }
+
+    /**
+     * Set zip_code
+     *
+     * @param string $zipCode
+     * @return Address
+     */
+    public function setZipCode($zipCode)
+    {
+        $this->zip_code = $zipCode;
+
+        return $this;
+    }
+
+    /**
+     * Get zip_code
+     *
+     * @return string 
+     */
+    public function getZipCode()
+    {
+        return $this->zip_code;
+    }
+
+    
+    /**
+     * @var point
+     */
+    private $geolocation;
+
+
+    /**
+     * Set geolocation
+     *
+     * @param point $geolocation
+     * @return Address
+     */
+    public function setGeolocation($geolocation)
+    {
+        $this->geolocation = $geolocation;
+
+        return $this;
+    }
+
+    /**
+     * Get geolocation
+     *
+     * @return point 
+     */
+    public function getGeolocation()
+    {
+        return $this->geolocation;
+    }
+}

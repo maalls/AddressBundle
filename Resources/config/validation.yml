@@ -1,0 +1,15 @@
+Maalls\AddressBundle\Entity\Address:
+    properties:
+        country:
+            - NotBlank: ~
+        zip_code:
+            - NotBlank: ~
+            - Regex: 
+                pattern: '/^[0-9a-zA-Z -]+$/'
+                message: 'Invalid zip code format.'
+        lat:
+            - Regex:
+                pattern: '/^-?[0-9\.]*$/'
+        lng:
+            - Regex:
+                pattern: '/^-?[0-9\.]*$/'

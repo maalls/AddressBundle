@@ -1,0 +1,5 @@
+services:
+  maalls.address:
+    class: Maalls\AddressBundle\Form\AddressType
+    tags:
+        - { name: form.type, alias: address }

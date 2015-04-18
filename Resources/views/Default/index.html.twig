@@ -1,0 +1,70 @@
+{% extends 'MaallsAdminBundle::templates/table.html.twig' %}
+{% block pageTitle %}Addresses{% endblock %}
+
+{% block breadcrumb %}
+
+    <li class="active">
+        <a href="{{ path('maalls_addresses') }}">Addresses</a>
+    </li>
+
+{% endblock %}
+
+{% block header %}
+    <div class="ibox-title">
+    
+        <h5></h5>
+
+        <div class="ibox-tools">
+            <a href="{{ path('maalls_addresses_create') }}" class="btn btn-primary btn-xs">Create new Address</a>
+        </div>
+    
+    </div>
+
+    
+{% endblock %}
+
+{% block tableTop %}
+
+    <div class="row">
+        <div class="col-sm-3">
+            hello
+        </div>
+    </div>
+
+{% endblock %}
+
+
+{% block table %}
+    
+    <thead>
+        <tr role="row">
+            <th>ID</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>Province</th>
+            <th>Country</th>
+            <th>Zip Code</th>
+            <th>Coordinates</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        {% for address in pager %}
+            <tr class="gradeA {{ cycle(['odd', 'even'], loop.index) }}" role="row">
+                
+                <td>{{ address.id }}</td>
+                <td>{{ address.addressLine1 }}<br/>{{ address.addressLine2 }}<br/></td>
+                <td>{{ address.City }}</td>
+                <td>{{ address.Province }}</td>
+                <td>{{ address.Country }}</td>
+                <td>{{ address.Zipcode }}</td>
+                <td>{{ address.lat }},{{ address.lng }}</td>
+                <td class="text-center">
+                    <a href="{{ path('maalls_addresses_edit', { id: address.id }) }}" class="btn btn-white btn-sm"><i class="fa fa-pencil"></i> Edit </a>
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+
+{% endblock %}

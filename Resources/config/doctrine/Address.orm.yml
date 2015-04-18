@@ -1,0 +1,34 @@
+Maalls\AddressBundle\Entity\Address:
+    type: entity
+    table: address
+    id:
+        id:
+            type: integer
+            generator: { strategy: AUTO }
+    fields:
+        address_line1:
+            type: string
+            length: 256
+        address_line2:
+            type: string
+            length: 256
+        country:
+            type: string
+            length: 64
+        city:
+            type: string
+            length: 64
+        province:
+            type: string
+            length: 64
+        zip_code:
+            type: string
+            length: 16
+        lat:
+            type: decimal
+            precision: 10
+            scale: 6
+        lng:
+            type: decimal
+            precision: 10
+            scale: 6

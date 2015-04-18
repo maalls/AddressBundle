@@ -1,0 +1,16 @@
+
+{% block zipcode_row %}
+    <div class="form-group{% if (not compound or force_error|default(false)) and not valid %} has-error{% endif %}">
+        
+        {{ form_label(form) }}
+        <div class="input-group">
+            {{ form_widget(form) }}
+            <span class="input-group-btn"> 
+                <button class="btn btn-primary" id="{{form.vars.id}}_zipcode_autofill" data-api-url="{{ path('maalls_zipcode', {country: "country", zipcode: "zc"}) }}">Locate</button> 
+            </span>
+        </div>
+        {{ form_errors(form) }}
+    </div>
+
+   
+{% endblock %}

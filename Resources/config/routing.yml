@@ -1,0 +1,15 @@
+maalls_addresses:
+    path:     /addresses
+    defaults: { _controller: MaallsAddressBundle:Default:index }
+
+maalls_addresses_update:
+    path:      /addresses/update 
+    defaults: { _controller: MaallsAddressBundle:Default:update }
+
+maalls_addresses_create:
+    path:     /addresses/create
+    defaults: { _controller: MaallsAddressBundle:Default:create }
+
+maalls_addresses_edit:
+    path:     /addresses/{id}/edit
+    defaults: { _controller: MaallsAddressBundle:Default:edit }
